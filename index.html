@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayık Tools | Conveyor Belt Troubleshooting Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="brand">
+      <img src="https://www.konveyorbant.com/wp-content/themes/ayik-band/assets/image/logo/logo2.svg" alt="Ayık Band" class="brand-logo">
+      <div>
+        <h1>Diagnostics & Tools</h1>
+      </div>
+    </div>
+    <nav class="main-menu" aria-label="Main menu">
+      <button class="menu-button active" data-target="home">Main Menu</button>
+      <button class="menu-button" data-target="conveyor-guide">Conveyor Belt Troubleshooting Guide</button>
+      <button class="menu-button disabled" disabled>Calculators (Coming Soon)</button>
+      <button class="menu-button disabled" disabled>Interactive Training (Coming Soon)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="content-section">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Always-on Reliability</p>
+          <h2>Choose your tool from the main menu.</h2>
+          <p class="lede">Start with the conveyor belt troubleshooting guide or explore other experiences as we add them. Every tool follows the same clear, reliable design language.</p>
+          <div class="cta-row">
+            <button class="primary-cta" data-target="conveyor-guide">Open troubleshooting guide</button>
+            <button class="ghost-cta disabled" disabled>More tools coming soon</button>
+          </div>
+        </div>
+        <div class="hero-graphic" aria-hidden="true">
+          <img class="hero-image" src="https://www.konveyorbant.com/wp-content/uploads/2025/01/444444.png" alt="" loading="lazy">
+        </div>
+      </section>
+
+      <section class="menu-grid" aria-label="Main menu tiles">
+        <article class="menu-card focusable" data-target="conveyor-guide" tabindex="0">
+          <div class="card-top">
+            <p class="eyebrow">Active</p>
+            <span class="pill">Live</span>
+          </div>
+          <h3>Conveyor belt troubleshooting</h3>
+          <p>Step-by-step, visual mapping from symptom to cause to solution.</p>
+          <div class="chevron" aria-hidden="true">→</div>
+        </article>
+        <article class="menu-card disabled" aria-disabled="true">
+          <div class="card-top">
+            <p class="eyebrow">Planned</p>
+            <span class="pill muted">Soon</span>
+          </div>
+          <h3>Calculators</h3>
+          <p>Quick belt speed, power, and tension tools for field teams.</p>
+          <div class="chevron" aria-hidden="true">⏳</div>
+        </article>
+        <article class="menu-card disabled" aria-disabled="true">
+          <div class="card-top">
+            <p class="eyebrow">Planned</p>
+            <span class="pill muted">Soon</span>
+          </div>
+          <h3>Interactive training</h3>
+          <p>Hands-on simulations and safety refreshers for operators.</p>
+          <div class="chevron" aria-hidden="true">⏳</div>
+        </article>
+      </section>
+    </section>
+
+    <section id="conveyor-guide" class="content-section hidden">
+      <header class="section-header">
+        <div>
+          <p class="eyebrow">Troubleshooting Guide</p>
+          <h3>Conveyor belt problems mapped to causes and fixes</h3>
+          <p>Pick a symptom, follow the cloud-like cause map, then open a cause to see the solution path.</p>
+        </div>
+        <div class="legend" aria-label="Guide color legend">
+          <span class="legend-dot primary"></span>Problem
+          <span class="legend-dot secondary"></span>Cause
+          <span class="legend-dot accent"></span>Solution
+        </div>
+      </header>
+
+      <article class="callout info">
+        <div class="callout-icon" aria-hidden="true">ⓘ</div>
+        <div>
+          <p class="callout-title">About this guide</p>
+          <p>Conveyors perform best when installed and maintained correctly. Many operational problems come from system abuse or treating symptoms rather than root causes. Use this guide to match symptoms to likely causes and field-proven fixes.</p>
+        </div>
+      </article>
+
+      <div class="guide-layout">
+        <div class="problem-column">
+          <div class="column-heading">
+            <h4 class="column-title">Pick your problem</h4>
+            <p class="column-hint">Scroll the list to browse issues without a long page.</p>
+          </div>
+          <div class="problem-slider">
+            <div id="problem-grid" class="problem-grid" aria-live="polite" tabindex="0"></div>
+            <span class="fade-edge vertical top" aria-hidden="true"></span>
+            <span class="fade-edge vertical bottom" aria-hidden="true"></span>
+          </div>
+        </div>
+
+        <div class="flow-column">
+          <h4 class="column-title">Possible causes</h4>
+          <div class="flow-map">
+            <div class="problem-cloud" id="selected-problem" aria-live="polite">Select a problem to start</div>
+            <div id="cause-clouds" class="cause-clouds"></div>
+          </div>
+        </div>
+
+        <div class="solution-column" aria-live="polite">
+          <h4 class="column-title">Solutions</h4>
+          <div id="solution-panel" class="solution-panel">
+            <p class="placeholder">Choose a cause to see recommended actions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
